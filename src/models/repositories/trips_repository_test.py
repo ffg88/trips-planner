@@ -1,5 +1,4 @@
-import uuid
-import pytest
+import uuid, pytest
 from datetime import datetime, timedelta
 from .trips_repository import TripsRepository
 from src.models.settings.db_connection_handler import db_connection_handler
