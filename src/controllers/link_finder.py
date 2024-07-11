@@ -24,3 +24,4 @@ class LinkFinder:
                 "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }
+        
