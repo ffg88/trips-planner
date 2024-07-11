@@ -11,14 +11,14 @@ def test_register_link():
     conn = db_connection_handler.get_connection()
     links_repository = LinksRepository(conn)
 
-    link_info = {
+    link_infos = {
         "id": link_id,
         "trip_id": trip_id,
         "link": "http://www.test.com",
         "title": "Test Link"
     }
 
-    links_repository.register_link(link_info)
+    links_repository.register_link(link_infos)
 
 @pytest.mark.skip(reason="db interaction")
 def test_find_links_from_trip():

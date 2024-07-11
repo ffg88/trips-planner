@@ -28,9 +28,7 @@ class TripsRepository:
         cursor.execute(
             '''
                 SELECT * FROM trips WHERE id = ?
-            ''', (
-                trip_id,
-            )
+            ''', (trip_id,)
         )
         trip = cursor.fetchone()
         return trip

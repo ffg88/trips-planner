@@ -26,9 +26,7 @@ class LinksRepository:
         cursor.execute(
             '''
                 SELECT * FROM links WHERE trip_id = ?
-            ''', (
-                trip_id,
-            )
+            ''', (trip_id,)
         )
         links = cursor.fetchall()
         return links
