@@ -5,9 +5,9 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
 
 def send_email(to_addr, body):
+    load_dotenv()
     from_addr = os.environ['EMAIL']
     login = os.environ['EMAIL']
     password = os.environ['PASS']
