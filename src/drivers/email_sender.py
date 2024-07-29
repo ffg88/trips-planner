@@ -2,10 +2,15 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 def send_email(to_addr, body):
-    from_addr = "c5ijx5ysqqjk2l2y@ethereal.email"
-    login = "c5ijx5ysqqjk2l2y@ethereal.email"
-    password = 'XC1M4kuWv49esuSVWk'
+    from_addr = os.environ['EMAIL']
+    login = os.environ['EMAIL']
+    password = os.environ['PASS']
 
     msg = MIMEMultipart()
     msg["from"] = "trip_confirmer@email.com"
